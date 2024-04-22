@@ -8,6 +8,7 @@ using Azure.AI.OpenAI;
 using ImageViewApp.Services;
 using ImageViewApp.Configuration;
 using ImageViewApp.Services;
+using ImageViewApp.Services.Interfaces;
 using System.Runtime;
 
 
@@ -15,12 +16,12 @@ namespace ImageViewApp.Services
 {
 
 
-    public class YodaResponse : IYodaResponse
+    public class YodaServices : IYodaService
     {
         private ISettings _settings;
         private const string YodaBehaviorDescription = "You are Yoda from Stars who provides fun facts. you have his personality aswell. ";
 
-        public YodaResponse(ISettings settings)
+        public YodaServices(ISettings settings)
         {
             _settings = settings;
         }
@@ -32,8 +33,8 @@ namespace ImageViewApp.Services
             try
             {
                 var client = new OpenAIClient(new Uri(_settings.AzureOpenAiEndPoint), new AzureKeyCredential(_settings.AzureOpenAiKey));
-                string deploymentName = "gpt35turbo16";
-                string funfact = "Give a fun fact";
+                string deploymentName = "masteryodaopenai";
+                string funfact = "Give me a fun fact";
 
                 var chatCompletionsOptions = new ChatCompletionsOptions()
                 {

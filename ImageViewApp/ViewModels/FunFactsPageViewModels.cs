@@ -11,12 +11,13 @@ using System.Windows.Input;
 using ImageViewApp.ViewModels;
 using ImageViewApp.Services;
 using ImageViewApp.Views;
+using ImageViewApp.Services.Interfaces;
 
 namespace ImageViewApp.ViewModels
 {
     public partial class FunFactsPageViewModel : BaseViewModel
     {
-        private IYodaResponse _helper;
+        private IYodaService _helper;
 
         private ChatMessage _response;
 
@@ -31,7 +32,7 @@ namespace ImageViewApp.ViewModels
             }
         }
 
-        public FunFactsPageViewModel(IYodaResponse helper)
+        public FunFactsPageViewModel(IYodaService helper)
         {
             _helper = helper;
         }

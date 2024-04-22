@@ -70,7 +70,7 @@
 	    </ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="View\FunFactsPageView.xaml">
+	  <MauiXaml Update="Views\FunFactsPageView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

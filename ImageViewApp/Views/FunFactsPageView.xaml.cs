@@ -1,5 +1,4 @@
 using ImageViewApp.ViewModels;
-using ImageViewApp.ViewModels;
 
 namespace ImageViewApp.Views;
 

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageViewApp.Services
+namespace ImageViewApp.Services.Interfaces
 {
-    public interface IYodaResponse
+    public interface IYodaService
     {
         Task<ChatMessage> GetCompletion();
     }
